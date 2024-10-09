@@ -21,13 +21,13 @@ int main()
 	//Š|‚¯Z
 	int x = uniform_int_distribution<>(1, 30)(rand);
 	int y = uniform_int_distribution<>(1, 20)(rand);
-	questions[0].s = to_string(x) + "x" + to_string(y);
+	questions[0].s = to_string(x) + "x" + to_string(y) + "‚Ì“š‚¦‚ÍH";
 	questions[0].a = x * y;
 
 	//Š„‚èZ
 	x = uniform_int_distribution<>(1, 30)(rand);
 	y = uniform_int_distribution<>(1, 20)(rand);
-	questions[1].s = to_string(x * y) + "€" + to_string(y);
+	questions[1].s = to_string(x * y) + "€" + to_string(y) + "‚Ì“š‚¦‚ÍH";
 	questions[1].a = x;
 
 	//•¡G‚È®
@@ -35,7 +35,7 @@ int main()
 	y = uniform_int_distribution<>(1, 10)(rand);
 	int z = uniform_int_distribution<>(1, 10)(rand);
 	int w = uniform_int_distribution<>(1, 10)(rand);
-	questions[2].s = to_string(x) + "-(" + to_string(y * w) + "+" + to_string(z * w) + ")€" + to_string(w);
+	questions[2].s = to_string(x) + "-(" + to_string(y * w) + "+" + to_string(z * w) + ")€" + to_string(w) + "‚Ì“š‚¦‚ÍH";
 	questions[2].a = x - (y + z);
 
 	//OŠpŒ`‚Ì–ÊÏ
@@ -47,7 +47,7 @@ int main()
 
 	for (const auto& e : questions)
 	{
-		cout << e.s << "‚Ì“š‚¦‚ÍH\n";
+		cout << e.s << "\n";
 		int answer;
 		cin >> answer;
 		if (answer == e.a)

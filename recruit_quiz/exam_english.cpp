@@ -133,7 +133,7 @@ QuestionList CreateEnglishPhraseExam()
 		3, { 0, 1, 2 }},
 	{ "be not supposed to [A]", "[A]してはいけないことになっている",
 	  "You are not supposed to enter this room.", "この部屋に入ってはいけません。",
-		3, { 2, 3, 4 }},
+		3, { 2, 3, 4 }}
 	};
 
 	constexpr int quizCount = 5;
@@ -222,9 +222,9 @@ QuestionList CreateEnglishPhraseExam()
 
 			// 問題文を作成
 			string s = "「" + string(data[correctIndex].meaning) + "」に対応する定型文を選べ\n";
-			s += std::string(" 1:") + data[answers[0]].meaning + "\n";
-			s += std::string(" 2:") + data[answers[1]].meaning + "\n";
-			s += std::string(" 3:") + data[answers[2]].meaning;
+			s += std::string(" 1:") + data[answers[0]].phrase + "\n";
+			s += std::string(" 2:") + data[answers[1]].phrase + "\n";
+			s += std::string(" 3:") + data[answers[2]].phrase;
 
 			questions.push_back({ s, to_string(correctNo) });
 

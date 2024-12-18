@@ -223,6 +223,8 @@ QuestionList CreatePhysicsExam()
 		to_string(v * v * 100 / 20) + "cmの位置で静かに放した。\n" +
 		"このとき、おもりが最下点を通過するときの速度をm/s単位で求めよ。",
 		to_string(v) });
+
+
 	} // 振り子
 
 

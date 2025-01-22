@@ -176,7 +176,7 @@ QuestionList CreateEnglishPhraseExam()
 
 			//’PŒê‚ð•¶‚É•œŒ³
 			string s = words[0];
-			for (int j = 0; j < words.size(); j++)
+			for (int j = 1; j < words.size(); j++)
 			{
 				s += " " + words[j];
 			}
@@ -184,7 +184,7 @@ QuestionList CreateEnglishPhraseExam()
 			//–â‘è•¶‚Æ“š‚¦‚ð’Ç‰Á
 			questions.push_back({
 				"[ ? ]‚É“KØ‚ÈŒê‚ð“ü‚ê‚Ä‰p•¶‚ðŠ®¬‚³‚¹‚æ\n" + string(e.translation) + "\n", a
-				});
+				 });
 		}
 		break;
 
@@ -231,6 +231,21 @@ QuestionList CreateEnglishPhraseExam()
 		}
 		break;
 	}		//switch(type)
+
+	return questions;
+}
+
+/*
+	‰pŒê‚Ì–â‘è‚ðì¬‚·‚é
+*/
+
+QuestionList CreateEnglishExam()
+{
+	QuestionList questions;
+
+	questions = CreateEnglishWordExam();
+	QuestionList phraseExam = CreateEnglishPhraseExam();
+	questions.insert(questions.end(), phraseExam.begin(), phraseExam.end());
 
 	return questions;
 }
